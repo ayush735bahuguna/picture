@@ -35,10 +35,8 @@ export default function Header() {
         }, true);
     }
 
-
     return (
         <>
-            <div id="scrollOnTop"></div>
 
             <nav id='TopBar' className=" navbar navbar-expand-lg bg-dark" data-bs-theme="dark" >
                 <div className="container-fluid">
@@ -124,7 +122,7 @@ export default function Header() {
                 </div>
             </div>
 
-            <a href='#scrollOnTop' id='ScrollOnTop'>
+            <a href='#' id='ScrollOnTop'>
                 <p id='ScrollOnTopHeading'> Top</p>
                 <span id='ScrollOnTopHeadingIcon' className="material-symbols-outlined">
                     ios_share

@@ -11,7 +11,7 @@ const Context = ({ children }) => {
     const [Data, setData] = useState([]);
     const [pageno, setPageno] = useState(1);
     const [isloading, setIsLoading] = useState(true);
-    const [orientation, setorientation] = useState("squarish");
+    const [orientation, setorientation] = useState("portrait");
     const [order_by, setorder_by] = useState("latest");
 
 
