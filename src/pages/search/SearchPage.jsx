@@ -16,6 +16,7 @@ export default function SearchPage() {
 
     return (
         <>
+            <div id="ScrollAfterSearch"></div>
             <p id='ScrollAfterSearch' style={{ fontSize: "35px", backgroundColor: " #1b1f22", color: "whitesmoke", padding: "15px" }}> Search Result For <strong> {query} </strong> </p >
 
             <InfiniteScrollComponent />
