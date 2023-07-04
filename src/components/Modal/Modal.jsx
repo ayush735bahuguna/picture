@@ -10,10 +10,10 @@ export default function Modal(props) {
         setcopyAlert(true);
     }
 
-    const imgDownlodHandler = () => {
-        console.log(props.altDescription);
-        console.log(props.downlodUrl);
-    }
+    // const imgDownlodHandler = () => {
+    //     console.log(props.altDescription);
+    //     console.log(props.downlodUrl);
+    // }
 
 
     setTimeout(() => {
@@ -69,7 +69,7 @@ export default function Modal(props) {
                             <ImageComponent imgurl={props.imgUrl} />
                         </div>
 
-                        <div onClick={imgDownlodHandler} type="button" className="btn btn-secondary my-2" >Downlod Image</div>
+                        {/* <div onClick={imgDownlodHandler} type="button" className="btn btn-secondary my-2" >Downlod Image</div> */}
 
                     </div>
                 </div>
