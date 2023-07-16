@@ -1,5 +1,4 @@
 import React from 'react'
-import "../../App.js"
 import { useGlobalContext } from "../../Context.js"
 import { useNavigate, Link } from "react-router-dom";
 import Navbar from './Searchbar.jsx';
@@ -38,7 +37,7 @@ export default function Header() {
     return (
         <>
 
-            <nav id='TopBar' className=" navbar navbar-expand-lg bg-dark" data-bs-theme="dark" >
+            <nav id='TopBar' className=" navbar navbar-expand-lg bg-light" data-bs-theme="light" >
                 <div className="container-fluid">
 
                     <Link to="/" className="navbar-brand" style={{ textAlign: "center", padding: "10px", fontSize: "25px", color: "#0d6efd", fontWeight: "600" }}>Magic Pictures</Link>
@@ -63,10 +62,10 @@ export default function Header() {
             </nav>
 
 
-            <div className='heroSection' style={
+            <div id='heroSection' style={
                 {
                     backgroundImage: `url(https://source.unsplash.com/1600x900/?Random)`,
-                    backgroundColor: "#000000a8",
+                    backgroundColor: "#00000075",
                     height: "370px",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
@@ -85,9 +84,9 @@ export default function Header() {
 
             </div >
 
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', position: "sticky", flexDirection: "column", top: "27px", zIndex: "1", backgroundColor: "#1b1f22" }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', position: "sticky", flexDirection: "column", top: "0px", zIndex: "1", backgroundColor: "white" }}>
 
-                <div style={{ display: "flex", justifyContent: "flex-start", width: "100%", alignItems: "center" }}>
+                <div style={{ display: "flex", justifyContent: "flex-start", width: "100%", alignItems: "center", padding: "20px", paddingBottom: "0px" }}>
 
                     <div className="dropdown-center m-1">
                         <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"> Orientation </button>
@@ -108,7 +107,7 @@ export default function Header() {
                     </div>
                 </div>
 
-                <div id="tags">
+                <div id="tags" style={{ padding: "10px 0px 10px 20px" }}>
                     <div className="tags hover   badge rounded-pill text-bg-primary" onClick={onClickHandler} > Nature </div>
                     <div className="tags hover  badge rounded-pill text-bg-primary" onClick={onClickHandler} > Earth </div>
                     <div className="tags hover  badge rounded-pill text-bg-primary" onClick={onClickHandler} > Monkey </div>
@@ -123,7 +122,6 @@ export default function Header() {
             </div>
 
             <a href='#' id='ScrollOnTop'>
-                <p id='ScrollOnTopHeading'> Top</p>
                 <span id='ScrollOnTopHeadingIcon' className="material-symbols-outlined">
                     ios_share
                 </span>

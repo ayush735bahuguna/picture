@@ -11,7 +11,7 @@ export default function HomePage() {
     }, [])
 
     return (
-        <div>
+        <div style={{ padding: "20px" }}>
             <InfiniteScrollComponent />
         </div>
     )

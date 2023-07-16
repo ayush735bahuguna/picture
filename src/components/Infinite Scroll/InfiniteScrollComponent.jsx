@@ -11,6 +11,9 @@ import Error from '../../pages/404/Error.jsx';
 export default function InfiniteScrollComponent(props) {
     const { Data, query, setData, pageno, setPageno, Acess_key, isloading, orientation, order_by } = useGlobalContext();
 
+
+
+
     const [totalresults, settotalresults] = useState(0);
     const [first_name, setfirst_name] = useState("");
     const [last_name, setlast_name] = useState("");
@@ -57,38 +60,48 @@ export default function InfiniteScrollComponent(props) {
         <>
             {isloading && <h1 style={{ color: "white" }}> <Loader /> </h1>}
 
-            {!isloading && <InfiniteScroll
-                dataLength={Data.length}
-                next={fetchMoreData}
-                hasMore={Data.length !== totalresults}
-                scrollThreshold={.99}
-                loader={<Loader />}
-                endMessage={<h3> No More Images</h3>}
-            >
+            {!isloading &&
+                <div>
+                    {Data?.length !== 0 ? (
+                        <InfiniteScroll
+                            dataLength={Data.length}
+                            next={fetchMoreData}
+                            hasMore={Data.length !== totalresults}
+                            scrollThreshold={.99}
+                            loader={<Loader />}
+                            endMessage={<h3> No More Images</h3>}
+                        >
+                            <div style={css['img_container']} id="img_outer_container" >
+                                {Data && Data.map((e, index) => {
+                                    const changeId = () => {
+                                        setimgUrl(e.urls.regular)
+                                        setaltDescription(e.alt_description)
+                                        setfirst_name(e.user.first_name)
+                                        setlast_name(e.user.last_name)
+                                        setprofile_image(e.user.profile_image.large)
+                                        setdownlodUrl(e.links.download)
+                                        setimgId(e.id)
+                                        // console.log(e);
+                                    }
 
-                <div style={css['img_container']} id="img_outer_container" >
-                    {Data && Data.map((e, index) => {
-                        const changeId = () => {
-                            setimgUrl(e.urls.regular)
-                            setaltDescription(e.alt_description)
-                            setfirst_name(e.user.first_name)
-                            setlast_name(e.user.last_name)
-                            setprofile_image(e.user.profile_image.large)
-                            setdownlodUrl(e.links.download)
-                            setimgId(e.id)
-                            // console.log(e);
-                        }
+                                    return (
+                                        <div key={index} onClick={changeId} data-bs-toggle="modal" data-bs-target="#exampleModal" style={css['img']} className="img_container" >
 
-                        return (
-                            <div key={index} onClick={changeId} data-bs-toggle="modal" data-bs-target="#exampleModal" style={css['img']} className="img_container" >
+                                            <ImageCard imgurl={e.urls.small} index={index} />
 
-                                <ImageCard imgurl={e.urls.small} index={index} />
-
+                                        </div>
+                                    )
+                                })}
                             </div>
-                        )
-                    })}
+                        </InfiniteScroll>
+                    ) : (
+                        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", color: "white", fontSize: "25px", margin: "50px" }}>
+                            No Content available
+                        </div>
+                    )}
+
                 </div>
-            </InfiniteScroll>}
+            }
 
             <Modal imgUrl={imgUrl} downlodUrl={downlodUrl} profile_image={profile_image} first_name={first_name} last_name={last_name} altDescription={altDescription} imgId={imgId} />
 

@@ -1,5 +1,5 @@
 :root {
-  --backgroundColor: #1b1f22;
+  --backgroundColor: white;
   --white: #ffffff;
 }
 
@@ -22,8 +22,6 @@ body {
   background-color: var(--backgroundColor);
   display: flex;
   width: 100vw;
-  padding-bottom: 7px;
-  padding-top: 5px;
   overflow: scroll hidden;
 
 
@@ -63,7 +61,7 @@ body {
 
     &:hover .card,
     &:focus .card {
-      transform: scale(102%);
+      transform: scale(105%);
     }
 
   }
@@ -101,7 +99,8 @@ body {
 }
 
 #ScrollOnTop {
-  color: #ffffff;
+  color: black;
+
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -111,9 +110,10 @@ body {
   justify-content: center;
   flex-direction: column-reverse;
   cursor: pointer;
-  background-color: #0000008a;
+  background-color: white;
+
   padding: 4px;
-  border-radius: 5px;
+  border-radius: 50%;
   text-decoration: none;
 
   #ScrollOnTopHeading {
@@ -134,15 +134,14 @@ body {
   }
 }
 
-.heroSection {
+#heroSection {
+  position: relative;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   flex-direction: column;
   height: 350px;
   color: #ffffff;
   padding: 20px;
-  /* padding-left: 30px; */
 
   #heroSectionHeading {
     font-size: 35px;
@@ -172,10 +171,3 @@ body {
     width: 50%;
   }
 }
-
-/* 
-@media screen and (max-width: 574px) {
-  body {
-    display: block;
-  }
-} */
