@@ -86,6 +86,20 @@ export default function Header() {
 
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', position: "sticky", flexDirection: "column", top: "0px", zIndex: "1", backgroundColor: "white" }}>
 
+
+                <div id="tags" style={{ padding: "10px 0px 10px 20px" }}>
+                    <div className="tags hover   badge rounded-pill text-bg-primary" onClick={onClickHandler} > Nature </div>
+                    <div className="tags hover  badge rounded-pill text-bg-primary" onClick={onClickHandler} > Earth </div>
+                    <div className="tags hover  badge rounded-pill text-bg-primary" onClick={onClickHandler} > Monkey </div>
+                    <div className="tags hover  badge rounded-pill text-bg-primary" onClick={onClickHandler} > Bike </div>
+                    <div className="tags hover  badge rounded-pill text-bg-primary" onClick={onClickHandler} > Cities </div>
+                    <div className="tags hover  badge rounded-pill text-bg-primary" onClick={onClickHandler} > Bikes </div>
+                    <div className="tags hover  badge rounded-pill text-bg-primary" onClick={onClickHandler} > Art </div>
+                    <div className="tags hover  badge rounded-pill text-bg-primary" onClick={onClickHandler} > Space </div>
+                    <div className="tags hover  badge rounded-pill text-bg-primary" onClick={onClickHandler} > Mountains </div>
+                    <div className="tags hover  badge rounded-pill text-bg-primary" onClick={onClickHandler} > Cars </div>
+                </div>
+
                 <div style={{ display: "flex", justifyContent: "flex-start", width: "100%", alignItems: "center", padding: "20px", paddingBottom: "0px" }}>
 
                     <div className="dropdown-center m-1">
@@ -107,18 +121,6 @@ export default function Header() {
                     </div>
                 </div>
 
-                <div id="tags" style={{ padding: "10px 0px 10px 20px" }}>
-                    <div className="tags hover   badge rounded-pill text-bg-primary" onClick={onClickHandler} > Nature </div>
-                    <div className="tags hover  badge rounded-pill text-bg-primary" onClick={onClickHandler} > Earth </div>
-                    <div className="tags hover  badge rounded-pill text-bg-primary" onClick={onClickHandler} > Monkey </div>
-                    <div className="tags hover  badge rounded-pill text-bg-primary" onClick={onClickHandler} > Bike </div>
-                    <div className="tags hover  badge rounded-pill text-bg-primary" onClick={onClickHandler} > Cities </div>
-                    <div className="tags hover  badge rounded-pill text-bg-primary" onClick={onClickHandler} > Bikes </div>
-                    <div className="tags hover  badge rounded-pill text-bg-primary" onClick={onClickHandler} > Art </div>
-                    <div className="tags hover  badge rounded-pill text-bg-primary" onClick={onClickHandler} > Space </div>
-                    <div className="tags hover  badge rounded-pill text-bg-primary" onClick={onClickHandler} > Mountains </div>
-                    <div className="tags hover  badge rounded-pill text-bg-primary" onClick={onClickHandler} > Cars </div>
-                </div>
             </div>
 
             <a href='#' id='ScrollOnTop'>
