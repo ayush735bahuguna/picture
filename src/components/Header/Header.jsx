@@ -123,7 +123,7 @@ export default function Header() {
 
             </div>
 
-            <a href='#' id='ScrollOnTop'>
+            <a href='#heroSection' id='ScrollOnTop'>
                 <span id='ScrollOnTopHeadingIcon' className="material-symbols-outlined">
                     ios_share
                 </span>
